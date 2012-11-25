@@ -1,0 +1,10 @@
+header {
+  background-color: #222;
+  background-image: none;
+  border-bottom: 6px solid #111;
+}
+
+header h1 {
+  font-size: 110px;
+  color: #fff;
+}
