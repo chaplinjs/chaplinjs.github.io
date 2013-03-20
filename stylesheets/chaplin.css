@@ -5,6 +5,9 @@ header {
 }
 
 header h1 {
-  font-size: 110px;
-  color: #fff;
+  font-size: 98px;
+}
+
+header h1, header p {
+  color: #eee;
 }
