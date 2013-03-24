@@ -1,11 +1,12 @@
 header {
-  background-color: #ddd;
-  background-image: url(../images/black-noise.png);
+  background-color: #333;
+  background-image: url(../images/noise.png);
   border-bottom: 6px solid #111;
 }
 
 header h1 {
   font-size: 98px;
+  text-shadow: 2px 2px 3px #111;
 }
 
 header h1, header p {
