@@ -44,6 +44,7 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
   <li>Cross-module communication using the <strong>Mediator</strong> and Publish/Subscribe patterns</li>
   <li><strong>Controllers</strong> for managing individual UI views</li>
   <li>Rails-style <strong>routes</strong> which map URLs to controller actions</li>
+  <li>URL <strong>reversals</strong> which allow to dynamically construct app URLs</li>
   <li>A route dispatcher and a <strong>top-level view</strong> manager</li>
   <li>Extended <strong>model, view and collection</strong> classes to avoid repetition and enforce conventions</li>
   <li>A <strong>collection view</strong> for easy and intelligent list rendering</li>
@@ -66,16 +67,20 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 
 <ul>
   <li><a href="http://documentcloud.github.com/backbone/">Backbone</a> (> 1.0)</li>
-  <li><a href="http://documentcloud.github.com/underscore/">Underscore</a> (> 1.4) or <a href="http://lodash.com/">lodash</a> (> 1.3)</li>
+  <li><a href="http://lodash.com/">lodash</a> (> 1.3) or <a href="http://documentcloud.github.com/underscore/">Underscore</a> (> 1.4)</li>
   <li><a href="http://jquery.com/">jQuery</a> (> 1.9) or <a href="http://zeptojs.com">Zepto</a> (> 1.0)</li>
 </ul>
 
-<p>If you’ll be using the AMD version, you will also need an AMD module loader like <a href="http://requirejs.org/">RequireJS</a>, <a href="https://github.com/jrburke/almond">Almond</a> or <a href="https://github.com/cujojs/curl">curl</a> to load Chaplin and lazy-module application modules.
+<p>If you’ll be using Chaplin with AMD, you will also need an AMD module loader like <a href="http://requirejs.org/">RequireJS</a>, <a href="https://github.com/jrburke/almond">Almond</a> or <a href="https://github.com/cujojs/curl">curl</a> to load Chaplin and lazy-module application modules.
 </p>
 
 <h2>Documentation</h2>
 
 <p>Documentation for Chaplin is available at <a href="http://docs.chaplinjs.org/">docs.chaplinjs.org</a>.</p>
+
+Chaplin application lifecycle can be described by the picture:
+
+<a href="images/chaplin-lifecycle.png"><img src="images/chaplin-lifecycle.png" /></a>
 
 <p>The <a href="http://chaplinjs.org/annotated/chaplin.html">annotated source code</a> is available, too.</p>
 
@@ -100,7 +105,7 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 <ul>
   <li><a href="https://github.com/chaplinjs/chaplin-boilerplate">Chaplin Boilerplate</a> is a “Hello world” example project using Chaplin.</li>
   <li><a href="https://github.com/chaplinjs/chaplin-boilerplate-plain">Chaplin Boilerplate in JS</a> is a variant of the previous boilerplate for those preferring JavaScript over CoffeeScript.</li>
-  <li><a href="https://github.com/paulmillr/brunch-with-chaplin">Brunch with Chaplin</a> is a skeleton application for service-based web apps, where <a href="http://brunch.io">Brunch</a> is used for assembling files &amp; assets. It incorporates <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and <a href="http://learnboost.github.io/stylus/">stylus</a>/<a href="http://handlebarsjs.com/">Handlebars</a> as app languages. It’s included by default with Brunch.</li>
+  <li><a href="https://github.com/paulmillr/brunch-with-chaplin">Brunch with Chaplin</a> is a skeleton application for service-based web apps, where <a href="http://brunch.io">Brunch</a> is used for assembling files &amp; assets. It incorporates <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and <a href="http://learnboost.github.io/stylus/">stylus</a>/<a href="http://handlebarsjs.com/">Handlebars</a> as app languages.</li>
   <li>If you’re using <a href="http://gruntjs.com/">Grunt</a>, an <a href="https://github.com/chaplinjs/grunt-init-chaplin">application generator</a> is available.</li>
   <li>For <a href="http://rubyonrails.org/">Ruby on Rails</a> users, we’ve compiled a <a href="https://github.com/chaplinjs/chaplin-rails">Boilerplate Rails Application</a> with Backbone, Chaplin and Require.js.</li>
 </ul>
