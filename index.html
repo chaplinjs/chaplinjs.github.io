@@ -1,40 +1,60 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Chaplin | HTML5 application architecture</title>
-    <link rel="stylesheet" href="stylesheets/application.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+---
+layout: base
+---
 
-    <header>
-      <h1>Chaplin</h1>
-      <p>Application architecture using Backbone.js.</p>
-    </header>
+<div class="social-buttons">
+  <iframe class="social-button-twitter" allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=chaplinjs&show_count=true&size=l" style="width:184px; height:30px;"></iframe>
+  <iframe class="social-button-github" src="http://ghbtns.com/github-btn.html?user=chaplinjs&repo=chaplin&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="30px"></iframe>
+</div>
+<h1>About Chaplin</h1>
 
-    <div class="wrapper">
-    <nav>
-      <ul></ul>
-    </nav>
-<section>
-  <div class="social-buttons">
-    <iframe class="social-button-twitter" allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=chaplinjs&show_count=true&size=l" style="width:184px; height:30px;"></iframe>
-    <iframe class="social-button-github" src="http://ghbtns.com/github-btn.html?user=chaplinjs&repo=chaplin&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="30px"></iframe>
-  </div>
-  <h1>About Chaplin</h1>
 
 <p>
 Chaplin is an architecture for JavaScript applications using the <a href="http://backbonejs.org/">Backbone.js</a> library. Chaplin addresses Backbone’s limitations by providing a lightweight and flexible structure that features well-proven design patterns and best practices.
 </p>
 
-<p>Some of Chaplin’s features:</p>
+<p>Chaplin empowers you to <strong>quickly</strong> develop <strong>scalable single-page</strong> web applications; allowing you to focus on designing and developing the underlying functionality in your web application.</p>
+
+<div class="downloads clearfix">
+  <div class="primary-downloads">
+    <div class="download-block">
+      <a class="dl-button" href="http://chaplinjs.org/downloads/chaplin.js">Download chaplin.js</a>
+      <p>or install with package managers:</p>
+      <ul>
+        <li><code>bower install --save chaplin</code></li>
+        <li><code>component install chaplinjs/downloads</code></li>
+      </ul>
+    </div>
+    <div class="download-block">
+      <a class="dl-button" href="http://chaplinjs.org/downloads/chaplin.min.js">Minified (12K gzip)</a>
+    </div>
+  </div>
+
+  <h3>Boilerplates</h3>
+
+
+  <div class="download-block first">
+    <a class="dl-button secondary" href="https://github.com/paulmillr/brunch-with-chaplin">Brunch with Chaplin</a>
+    <p>uses <a href="http://brunch.io">Brunch</a> as builder which allows ultra-simple workflow. It incorporates <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and <a href="http://learnboost.github.io/stylus/">stylus</a> / <a href="http://handlebarsjs.com/">handlebars</a></p>
+  </div>
+
+  <div class="download-block">
+    <a class="dl-button secondary" href="https://github.com/chaplinjs/chaplin-boilerplate/archive/master.zip">Chaplin boilerplate</a>
+    <p>“hello world” example project using Chaplin</p>
+  </div>
+
+  <div class="download-block">
+    <a class="dl-button secondary" href="https://github.com/chaplinjs/chaplin-boilerplate-plain/archive/master.zip">Chaplin boilerplate js</a>
+    <p>variant of the previous boilerplate for those preferring JavaScript over CoffeeScript</p>
+  </div>
+
+  <div class="download-block">
+    <a class="dl-button secondary" href="https://github.com/chaplinjs/chaplin-rails/archive/master.zip">Rails boilerplate</a>
+    <p>With Backbone, Chaplin and Require.js</p>
+  </div>
+</div>
+
+<h2>Features</h2>
 
 <ul>
   <li>Better support for CoffeeScript <strong>class hierarchies</strong> as well as object composition</li>
@@ -50,18 +70,11 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
   <li>A <strong>collection view</strong> for easy and intelligent list rendering</li>
 </ul>
 
-<h2>Downloads</h2>
+<h2>Dependencies</h2>
 
 <p>Chaplin supports AMD and Common.js modules. There is no “global variables” build, so Chaplin explicitly prohibits any using without module systems.</p>
 
 <p>Latest release is 0.10.0 (<a href="https://github.com/chaplinjs/chaplin/blob/master/CHANGELOG.md">changelog</a>, <a href="http://github.com/chaplinjs/chaplin/compare/0.9.0...0.10.0">diff from 0.9.0</a>)</p>
-
-<ul>
-  <li><a href="http://chaplinjs.org/downloads/chaplin.js">Download chaplin.js</a></li>
-  <li><a href="http://chaplinjs.org/downloads/chaplin.min.js">Download chaplin.min.js</a></li>
-  <li>Execute <code>bower install --save chaplin#0.10.0</code> if you’re using <a href="http://bower.io">Twitter Bower</a> package manager</li>
-  <li>Execute <code>component install chaplinjs/downloads</code> if you’re using <a href="https://github.com/component/component">component(1)</a> package manager</li>
-</ul>
 
 <p>Chaplin depends on the following libraries:</p>
 
@@ -74,181 +87,8 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 <p>If you’ll be using Chaplin with AMD, you will also need an AMD module loader like <a href="http://requirejs.org/">RequireJS</a>, <a href="https://github.com/jrburke/almond">Almond</a> or <a href="https://github.com/cujojs/curl">curl</a> to load Chaplin and lazy-module application modules.
 </p>
 
-<h2>Documentation</h2>
-
-<p>Documentation for Chaplin is available at <a href="http://docs.chaplinjs.org/">docs.chaplinjs.org</a>.</p>
-
-<p>The <a href="http://chaplinjs.org/annotated/chaplin.html">annotated source code</a> is available, too.</p>
-
-<p>See also:</p>
-
-<ul>
-  <li><a href="http://9elements.com/io/index.php/comparison-of-marionette-and-chaplin/">JavaScript MVC frameworks: A Comparison of Marionette and Chaplin</a> <a href="http://habrahabr.ru/post/177843/">(Russian translation)</a></li>
-</ul>
-
-<h2>Motivation</h2>
-
-<p>While developing several web applications using Backbone.js, we felt the need for conventions on how to structure such applications. Backbone is an easy starting point, but provides only basic, low-level patterns. Especially, Backbone provides little to structure an actual application. For example, the famous “<a href="http://todomvc.com/">Todo list</a>” is not an application in the strict sense nor does it teach best practices for structuring Backbone code.</p>
-
-<p>Backbone doesn’t intend to be an all-round <a href="http://stackoverflow.com/questions/148747/what-is-the-difference-between-a-framework-and-a-library">framework</a> so it’s not appropriate to blame Backbone for these deliberate limitations. Nonetheless, most Backbone use cases need a sophisticated application architecture.</p>
-
-<p>This is where Chaplin enters the stage. Chaplin is derived from the codebase of <a href="http://moviepilot.com/">moviepilot.com</a>, a real-world single-page application. It draws attention to the top-level architecture: everything above simple routing, individual models, views and their binding.</p>
-
-<h2>Boilerplates</h2>
-
-<p>Chaplin needs a simple skeleton to start up and configure the core modules. We provide several boilerplates to make the start easier.</p>
-
-<ul>
-  <li><a href="https://github.com/chaplinjs/chaplin-boilerplate">Chaplin Boilerplate</a> is a “Hello world” example project using Chaplin.</li>
-  <li><a href="https://github.com/chaplinjs/chaplin-boilerplate-plain">Chaplin Boilerplate in JS</a> is a variant of the previous boilerplate for those preferring JavaScript over CoffeeScript.</li>
-  <li><a href="https://github.com/paulmillr/brunch-with-chaplin">Brunch with Chaplin</a> is a skeleton application for service-based web apps, where <a href="http://brunch.io">Brunch</a> is used for assembling files &amp; assets. It incorporates <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and <a href="http://learnboost.github.io/stylus/">stylus</a>/<a href="http://handlebarsjs.com/">Handlebars</a> as app languages.</li>
-  <li>If you’re using <a href="http://gruntjs.com/">Grunt</a>, an <a href="https://github.com/chaplinjs/grunt-init-chaplin">application generator</a> is available.</li>
-  <li>For <a href="http://rubyonrails.org/">Ruby on Rails</a> users, we’ve compiled a <a href="https://github.com/chaplinjs/chaplin-rails">Boilerplate Rails Application</a> with Backbone, Chaplin and Require.js.</li>
-</ul>
-
-<h1>Examples</h1>
-
-<p>
-  To give you an idea of how client-side applications are built using Chaplin, here are some projects and example applications whose source is freely accessible.
-</p>
-
-<h2>Ost.io</h2>
-<p><a href="http://ost.io/">Ost.io</a> is an open-source forum for GitHub projects (<a href="https://github.com/paulmillr/ostio">code</a>). It uses <a href="https://github.com/paulmillr/brunch-with-chaplin">Chaplin</a> as an application skeleton and Rails for the backend.</p>
-
-<p>
-  <a href="http://ost.io/">
-    <img src="images/screenshots/ostio-07-2013.png" alt="Ost.io">
-  </a>
-</p>
-
-<h2>Todos</h2>
-<p><a href="http://todomvc.com/labs/dependency-examples/chaplin-brunch/public/">Todos</a> (<a href="https://github.com/addyosmani/todomvc/tree/gh-pages/labs/dependency-examples/chaplin-brunch">code</a>) is a port of the famous Backbone todo example app. It uses localStorage to persist data.</p>
-
-<p>Alternative versions:</p>
-
-<ul>
-  <li><a href="http://dunglas.fr/2013/02/symfony-2-todomvc-backbone-chaplin/">Symfony TodoMVC Bundle</a> (<a href="https://github.com/dunglas/DunglasTodoMVCBundle">code</a>) — based on <a href="http://symfony.com/">Symfony</a> PHP framework.</li>
-</ul>
-
-<p class="example-screenshot">
-  <a href="http://todomvc.com/labs/dependency-examples/chaplin-brunch/public/">
-    <img src="http://todomvc.com/site/img/screenshot.png" alt="TodoMVC">
-  </a>
-</p>
-
-<h2>Composing with Chaplin</h2>
-<p><a href="http://chaplinjs.org/composer-example/public/">Composing with Chaplin</a> is an example that shows how Chaplin regions and compositions behave. Find its source code <a href="https://github.com/chaplinjs/composer-example">on GitHub</a>.
-
-<h2>Facebook Like Browser</h2>
-<p>This example application uses Facebook client-side authentication to display the user’s Facebook Likes. Find its source at <a href="https://github.com/chaplinjs/facebook-example">github.com/chaplinjs/facebook-example</a>.</p>
-
-<h2>Tweet your Brunch</h2>
-<p><a href="https://github.com/brunch/twitter">github.com/brunch/twitter</a> is a simple twitter client. It uses Twitter client-side authentication to display the user’s feed and create new tweets.</p>
-
-<h1>In Production</h1>
-
-<p>
-  Below you find some of the companies and projects using Chaplin in production. Are you using Chaplin too? Go ahead and <a href="https://github.com/chaplinjs/chaplin/wiki/Projects-and-companies-using-Chaplin">add your application to the wiki page</a> to let us know!
-</p>
-
-<h2>Delicious</h2>
-<p><a href="https://delicious.com">Delicious</a> is a free service designed to be the best place to save what you love on the web, whether it's a video, picture, product, blog post, article or music. We then help you remember and find it later. It’s using Brunch as application builder and <a href="http://chaplinjs.org">Chaplin</a> as a framework on top of Backbone.</p>
-
-<p>
-  <a href="https://delicious.com">
-    <img src="images/screenshots/delicious-07-2013.png" alt="Delicious">
-  </a>
-</p>
-
-<h2>GED VIZ by Bertelsmann Stiftung</h2>
-<p><a href="http://viz.ged-project.de/">GED VIZ</a> lets you create and share visualizations of global economic relations - for research, teaching and storytelling.</p>
-
-<p>
-  <a href="http://viz.ged-project.de/">
-    <img src="images/screenshots/ged-07-2013.png" alt="GED VIZ">
-  </a>
-</p>
-
-<h2>Bank of Ireland</h2>
-<p>The <a href="http://fundcentre.bankofireland.com/">Bank of Ireland Fund Centre</a> is a free service by MoneyMate that allows users to check funds, daily prices and performance.</p>
-
-<p>
-  <a href="http://fundcentre.bankofireland.com/">
-    <img src="images/screenshots/bankofireland-07-2013.png" alt="Bank of Ireland Fund Centre">
-  </a>
-</p>
-
-<h2>Moviepilot</h2>
-<p><a href="http://moviepilot.com/">Moviepilot</a> is a home for upcoming movies, where you can discover and read about the movies that interest and excite you.</p>
-
-<p>
-  <a href="http://moviepilot.com/">
-    <img src="images/screenshots/moviepilot-07-2013.png" alt="Moviepilot">
-  </a>
-</p>
-
-<h1>Community</h1>
-
-<ul>
-  <li>For general support and discussion, there’s a <a href="http://ost.io/@chaplinjs/chaplin">forum on ost.io</a>, a <a href="https://groups.google.com/forum/?hl=en&amp;fromgroups#!forum/chaplin-js">Google Group</a> and an IRC channel <code>#chaplinjs</code> on <a href="http://webchat.freenode.net?channels=chaplinjs">Freenode</a>.</li>
-  <li>If you’d like to report a bug or propose a feature, please use the <a href="https://github.com/chaplinjs/chaplin/issues">Github issues</a>. The issue tracker can also be used for general questions and task management.</li>
-  <li><a href="https://twitter.com/chaplinjs">Follow Chaplin.js on Twitter</a> to get updates on new versions, major changes and the ongoing development.</li>
-  <li>You can also post questions with the <a href="http://stackoverflow.com/questions/tagged/chaplinjs">#chaplinjs tag at Stack Overflow</a></li>
-</ul>
-
-<h2>Commercial support and training</h2>
-
-<p><a href="http://9elements.com/">9elements</a> — Berlin/Bochum, Germany</p>
-
-<p>One of the creators of Chaplin, is offering commercial support and training for Chaplin and Backbone-based JavaScript applications. 9elements is a software and design agency located in Berlin and Bochum, Germany. Send us a mail for more information: <a href="mailto:contact@9elements.com">contact@9elements.com</a>.</p>
-
-<p><a href="http://paulmillr.com/">Paul Miller</a> — Worldwide</p>
-
-<p>Chaplin &amp; Brunch maintainer is offering consulting &amp; training for all Backbone-related stuff. Contact him: <a href="mailto:&#112;&#97;&#117;&#108;&#43;&#99;&#111;&#110;&#115;&#117;&#108;&#116;&#105;&#110;&#103;&#64;&#112;&#97;&#117;&#108;&#109;&#105;&#108;&#108;&#114;&#46;&#99;&#111;&#109;">&#112;&#97;&#117;&#108;&#43;&#99;&#111;&#110;&#115;&#117;&#108;&#116;&#105;&#110;&#103;&#64;&#112;&#97;&#117;&#108;&#109;&#105;&#108;&#108;&#114;&#46;&#99;&#111;&#109;</a>.</p>
-
-<p><a href="http://www.concordusapps.com/">Concordus Applications</a> — Sacramento, CA, USA</p>
-
-<p>Offering commerical support and training for Chaplin and Backbone-based JavaScript applications. Concordus Applications is an enterprise integration and software development firm. Email us for more information: <a href="mailto:support@concordusapps.com">support@concordusapps.com</a>.</p>
-
-<p><a href="http://les-tilleuls.coop">La Coopérative des Tilleuls</a> - Lille, France</p>
-
-<p>Offering commercial support and training for Chaplin and Backbone-based JavaScript applications. La Coopérative des Tilleuls is a software, training and web-design cooperative enterprise located in Lille, France. Send us a mail for more information: <a href="mailto:contact@les-tilleuls.coop">contact@les-tilleuls.coop</a>.</p>
-
-<h2>Brought to you by</h2>
-
-<p class="builders">
-  <a href="http://molily.de/" rel="author"><img src="https://secure.gravatar.com/avatar/ae86e2cc402e0dceb88e7d4fc10cbc85" width="48" height="48" alt="Mathias Schäfer">
-   <span class="name">Mathias</span> Schäfer</a>
-
-  <a href="http://paulmillr.com/" rel="author"><img src="https://secure.gravatar.com/avatar/d342e4ef045c54a6a6f41d070d8a0406" width="48" height="48" alt="Paul Miller">
-   <span class="name">Paul</span> Miller</a>
-
-  <a href="https://github.com/mehcode" rel="author"><img src="https://secure.gravatar.com/avatar/23e170cf3bbbb2a392a96df75858b332" width="48" height="48" alt="Ryan Leckey">
-   <span class="name">Ryan</span> Leckey</a>
-
-  <a href="https://github.com/chaplinjs/chaplin/graphs/contributors">and others</a>
-</p>
-</section>
 
 <footer>
-  <p><small>Hosted on GitHub Pages &mdash; Theme based on <a href="https://github.com/mattgraham/Leap-Day">Leap Day</a>, tweaked by Brunch / Chaplin Team.</small></p>
+  <p><small>Hosted on <a href="https://github.com/chaplinjs/chaplinjs.github.com">GitHub Pages</a></small></p>
 </footer>
 
-</div>
-
-<!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '50b16606613f5d357c00002f');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
-</body>
-</html>

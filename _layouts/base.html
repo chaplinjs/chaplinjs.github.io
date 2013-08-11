@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Chaplin | HTML5 application architecture</title>
+  <link rel="stylesheet" href="stylesheets/application.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/main.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+  <div class="wrapper">
+
+<header>
+  <div class="list-wrapper">
+    <ul class="page-nav">
+      <li class="logo"><img width="30" src="http://chaplinjs.org/images/chaplin-hat.png" alt=""></li>
+      <li class="logo-text">Chaplin</li>
+      <li><a href="http://chaplinjs.org" data-pattern="\/\/chaplinjs\.org/(#.*)?$">About</a></li>
+      <li><a href="http://docs.chaplinjs.org" data-pattern="docs\.chaplinjs">Documentation</a></li>
+      <li><a href="http://chaplinjs.org/examples.html" data-pattern="examples\.html$">Examples</a></li>
+      <li><a href="http://chaplinjs.org/community.html" data-pattern="community\.html$">Community</a></li>
+    </ul>
+  </div>
+</header>
+
+<section>{{ content }}</section>
+
+  </div>
+
+<!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+<script>
+(function() {
+  var links = [].slice.call(document.querySelectorAll('.page-nav > li > a'));
+  links.forEach(function(link) {
+    link.className = link.className.replace('active', '');
+    var re = new RegExp(link.getAttribute('data-pattern'));
+    console.log(location.href, re);
+    if (re.test(location.href)) link.className += ' active';
+  });
+})();
+</script>
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '50b16606613f5d357c00002f');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+</body>
+</html>

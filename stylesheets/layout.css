@@ -1,16 +1,15 @@
 .wrapper {
-  width: 690px;
+  width: 750px;
   margin: 0 auto;
  position: relative;
 }
 
 header {
-  padding: 20px 0 30px 0;
+  /*padding: 10px 0 10px 0;*/
   margin: 0;
   text-align: center;
   background: url(../images/background.png) #4276b6;
   border-bottom: 6px solid #2D5891;
-  min-height: 76px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -webkit-font-smoothing: antialiased;
 }
@@ -115,7 +114,77 @@ footer {
   bottom: 20px;
 }
 
-@media only screen and (max-width: 1060px) {
+.downloads h3 {
+  text-align: center;
+}
+
+.dl-button {
+  margin: 0;
+  text-transform: none;
+  top: 9px;
+  right: 10px;
+  width: 145px;
+  padding: 8px 8px 8px 13px;
+  background-color: rgba(188, 122, 152, 0.95);
+  border: 1px solid #b86e9a;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.dl-button.secondary {
+  background-color: #d6ba8d;
+  border-color: #cca291;
+}
+
+.download-block {
+  width: 165px;
+  height: 205px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.download-block.first {
+  margin-left: 0;
+}
+
+.download-block p {
+  padding-left: 2px;
+}
+
+.dl-button:hover {
+  color: #c4baa6;
+}
+
+.dl-button.secondary:hover {
+  color: #b5679c;
+}
+
+.primary-downloads {
+  margin-left: 170px;
+}
+
+.primary-downloads p, .primary-downloads ul {
+  width: 340px;
+  text-align: center;
+}
+
+.primary-downloads .download-block {
+  height: 165px;
+}
+
+.primary-downloads .download-block:last-child {
+  height: 40px;
+}
+
+.primary-downloads ul {
+  list-style: none;
+}
+
+
+/*@media only screen and (max-width: 1060px) {
   div.wrapper {
     width: auto;
     margin: 0;
@@ -130,9 +199,9 @@ footer {
     text-align: center;
   }
 }
-
+*/
 /* Tablets */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 750px) {
   header {
     padding: 20px 20px;
     margin: 0;
