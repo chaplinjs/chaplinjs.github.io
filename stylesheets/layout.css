@@ -4,7 +4,7 @@
  position: relative;
 }
 
-header {
+.nav-header {
   /*padding: 10px 0 10px 0;*/
   margin: 0;
   text-align: center;
@@ -14,15 +14,15 @@ header {
   -webkit-font-smoothing: antialiased;
 }
 
-header h1 {
+.nav-header h1 {
   margin: 0 auto;
 }
 
-header h1 img {
+.nav-header h1 img {
   height: 100px;
 }
 
-header p {
+.nav-header p {
   color: #d8d8d8;
   color: white;
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
@@ -202,11 +202,11 @@ footer {
 */
 /* Tablets */
 @media only screen and (max-width: 750px) {
-  header {
+  .nav-header {
     padding: 20px 20px;
     margin: 0;
   }
-  header p {
+  .nav-header p {
     margin: auto 100px;
   }
   .social-buttons .button {
@@ -222,10 +222,10 @@ footer {
 
 /* Phones */
 @media only screen and (max-width: 480px) {
-  header h1 img {
+  .nav-header h1 img {
     height: 70px;
   }
-  header p {
+  .nav-header p {
     font-size: 14px;
     margin: auto 20px;
   }
@@ -256,7 +256,7 @@ footer {
   }
 }
 
-header {
+.nav-header {
   background-color: rgba(188, 122, 152, 0.95);
   border-bottom: 6px solid #b86e9a;
   height: 40px;
@@ -268,13 +268,13 @@ header {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-header .list-wrapper {
+.nav-header .list-wrapper {
   width: 752px;
   margin: 0 auto;
   padding-top: 5px;
 }
 
-header {
+.nav-header {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -282,48 +282,48 @@ header {
 }
 
 
-header ul {
+.nav-header ul {
   /*float: left;*/
   padding-left: 1.125em;
 }
 
-header .logo > img {
+.nav-header .logo > img {
   margin-top: 7px;
 }
 
 
-header .logo-text {
+.nav-header .logo-text {
   text-transform: none;
   margin-right: 15px;
   margin-left: 0;
   padding-left: 0;
 }
 
-header li {
+.nav-header li {
   padding: 0 0.625em;
   float: left;
   list-style-type: none;
   text-transform: uppercase;
 }
 
-header a {
+.nav-header a {
   color: #fff;
 }
 
-header a:hover {
+.nav-header a:hover {
   color: #c4baa6;
 }
 
-header a.active {
+.nav-header a.active {
   color: #6fcecb;
 }
 
-header h1 {
+.nav-header h1 {
   /*font-size: 98px;*/
   text-shadow: 2px 2px 3px #111;
 }
 
-header h1, header p {
+.nav-header h1, .nav-header p {
   /*color: #eee;*/
 }
 
