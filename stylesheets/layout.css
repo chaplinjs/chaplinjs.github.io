@@ -114,6 +114,10 @@ footer {
   bottom: 20px;
 }
 
+.downloads {
+  margin-bottom: 100px;
+}
+
 .downloads h3 {
   text-align: center;
 }
@@ -126,7 +130,6 @@ footer {
   width: 145px;
   padding: 8px 8px 8px 13px;
   background-color: rgba(188, 122, 152, 0.95);
-  border: 1px solid #b86e9a;
   color: #fff;
   margin: 0 auto;
   display: block;
@@ -258,7 +261,7 @@ footer {
 
 .nav-header {
   background-color: rgba(188, 122, 152, 0.95);
-  border-bottom: 6px solid #b86e9a;
+  border-bottom: 0;
   height: 40px;
   color: #fff;
   font-family: 'Helvetica';
