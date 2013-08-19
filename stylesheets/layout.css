@@ -362,6 +362,11 @@ footer {
   display: block;
 }
 
+@media only screen and (min-width: 750px) {
+  .toggle-navigation {
+    display: none;
+  }
+}
 
 /* Tablets */
 @media only screen and (max-width: 750px) {
