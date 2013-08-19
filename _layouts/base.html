@@ -16,12 +16,19 @@
 <header class="nav-header">
   <div class="list-wrapper">
     <ul class="page-nav">
-      <li class="logo"><img width="30" src="http://chaplinjs.org/images/chaplin-hat.png" alt=""></li>
-      <li class="logo-text">Chaplin</li>
-      <li><a href="http://chaplinjs.org" data-pattern="\/\/chaplinjs\.org/(#.*)?$">About</a></li>
-      <li><a href="http://docs.chaplinjs.org" data-pattern="docs\.chaplinjs">Documentation</a></li>
-      <li><a href="http://chaplinjs.org/examples.html" data-pattern="examples\.html$">Examples</a></li>
-      <li><a href="http://chaplinjs.org/support.html" data-pattern="support\.html$">Support</a></li>
+      <li class="logo-text">
+        <div class="logo"><img class="logoa" width="30" src="/images/chaplin-hat.png" alt=""></div>
+        <span class="logo-text-entity">Chaplin</span>
+        <button class="toggle-navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </li>
+      <li class="nav-toggle-content"><a href="http://chaplinjs.org" data-pattern="\/\/chaplinjs\.org/(#.*)?$">About</a></li>
+      <li class="nav-toggle-content"><a href="http://docs.chaplinjs.org" data-pattern="docs\.chaplinjs">Documentation</a></li>
+      <li class="nav-toggle-content"><a href="http://chaplinjs.org/examples.html" data-pattern="examples\.html$">Examples</a></li>
+      <li class="nav-toggle-content"><a href="http://chaplinjs.org/support.html" data-pattern="support\.html$">Support</a></li>
     </ul>
   </div>
 </header>
@@ -33,13 +40,25 @@
 <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
 <script>
 (function() {
-  var links = [].slice.call(document.querySelectorAll('.page-nav > li > a'));
+  var queryAll = function(selector) {
+    return [].slice.call(document.querySelectorAll(selector));
+  };
+  var links = queryAll('.page-nav > li > a');
   links.forEach(function(link) {
     link.className = link.className.replace('active', '');
     var re = new RegExp(link.getAttribute('data-pattern'));
     console.log(location.href, re);
     if (re.test(location.href)) link.className += ' active';
   });
+
+  document.querySelector('.toggle-navigation').addEventListener('click', function() {
+    queryAll('.nav-toggle-content').forEach(function(item) {
+      var existing = window.getComputedStyle(item).display;
+      var newStyle = (existing === 'none') ? 'list-item' : 'none';
+      console.log(item, newStyle)
+      item.style.display = newStyle;
+    });
+  }, true);
 })();
 </script>
 <script type="text/javascript">
