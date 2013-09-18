@@ -5,8 +5,61 @@ examples:
   ostio:
     name: 'Ost.io'
     link: 'http://ost.io/'
-    description: '[Ost.io](http://ost.io/) is an open-source forum for GitHub projects ([code](https://github.com/paulmillr/ostio)). It uses [Brunch with Chaplin](https://github.com/paulmillr/brunch-with-chaplin) as an application skeleton and Rails for the backend.'
-    screenshot: 'images/screenshots/ostio-07-2013.png'
+    repo: 'https://github.com/paulmillr/ostio'
+    shot: 'images/screenshots/ostio-07-2013.png'
+    desc: '[!NAME](!LINK) is an open-source forum for GitHub projects ([code](!REPO)). It uses [Brunch with Chaplin](https://github.com/paulmillr/brunch-with-chaplin) as an application skeleton and Rails for the backend.'
+  todos:
+    name: 'Todos'
+    link: 'http://todomvc.com/labs/dependency-examples/chaplin-brunch/public/'
+    repo: 'https://github.com/addyosmani/todomvc/tree/gh-pages/labs/dependency-examples/chaplin-brunch'
+    shot: 'http://todomvc.com/site-assets/screenshot.png'
+    desc: '[!NAME](!LINK) ([code](!REPO)) is a port of the famous Backbone todo example app. It uses localStorage to persist data. Alternatively, there is a [Symfony TodoMVC Bundle](http://dunglas.fr/2013/02/symfony-2-todomvc-backbone-chaplin/) ([code](https://github.com/dunglas/DunglasTodoMVCBundle)) — based on [Symfony](http://symfony.com/) PHP framework.'
+  composing:
+    name: 'Composing with Chaplin'
+    link: 'http://chaplinjs.org/composer-example/public/'
+    repo: 'https://github.com/chaplinjs/composer-example'
+    desc: '[!NAME](!LINK) is an example that shows how Chaplin regions and compositions behave. Find its source code [on GitHub](!REPO).'
+  likes:
+    name: 'Facebook like browser'
+    link: 'https://github.com/chaplinjs/facebook-example'
+    desc: 'This example application uses Facebook client-side authentication to display the user’s Facebook Likes. Find its source at [github.com/chaplinjs/facebook-example](!LINK).'
+  tweets:
+    name: 'Tweet your Brunch'
+    link: 'https://github.com/brunch/twitter'
+    desc: '[A simple twitter client](!LINK). It uses Twitter client-side authentication to display the user’s feed and create new tweets.'
+  symf:
+    name: 'Symfony-Chaplin demo'
+    link: 'https://github.com/pulse00/symfony-chaplin-demo'
+    desc: '[The app](!LINK) is used as a demo for the [Symfony](https://github.com/symfony/symfony) [usergroup vienna](http://www.meetup.com/sfugvienna/) to demonstrate a single page app using Symfony as a REST backend and chaplin as the html5 frontend.'
+
+production:
+  delicious:
+    name: 'Delicious'
+    link: 'https://delicious.com'
+    shot: 'images/screenshots/delicious-07-2013.png'
+    desc: '[!NAME](!LINK) is a free service designed to be the best place to save what you love on the web, whether it’s a video, picture, product, blog post, article or music. We then help you remember and find it later. It’s using Brunch as application builder and [Chaplin](http://chaplinjs.org) as a framework on top of Backbone.'
+  moviepilot:
+    name: 'Moviepilot'
+    link: 'http://moviepilot.com/'
+    shot: 'images/screenshots/moviepilot-07-2013.png'
+    desc: '[!NAME](!LINK) is a home for upcoming movies, where you can discover and read about the movies that interest and excite you. It was the original Chaplin app.'
+  gedviz:
+    name: 'GED VIZ'
+    link: 'http://viz.ged-project.de/'
+    repo: 'https://github.com/bertelsmannstift/GED-VIZ/tree/master/app/assets/javascripts'
+    shot: 'images/screenshots/ged-07-2013.png'
+    desc: '[!NAME](!LINK) by Bertelsmann Stiftung lets you create and share visualizations of global economic relations - for research, teaching and storytelling. Source code is available [on GitHub](!REPO)'
+  fundcentre:
+    name: 'Bank of Ireland'
+    link: http://fundcentre.bankofireland.com/
+    shot: 'images/screenshots/bankofireland-07-2013.png'
+    desc: 'The [!NAME](!LINK) is a free service by MoneyMate that allows users to check funds, daily prices and performance.'
+  dogkr:
+    name: 'Dogkr'
+    link: 'http://www.dogkr.com'
+    shot: 'http://cdn.dogkr.com/static/images/home_shot.jpg'
+    desc: '[!NAME](!LINK) is an online logger to record all your beloved dogs’ life moments, even tiny instants became timeless memories.'
+
 ---
 
 <h1>Examples</h1>
@@ -15,43 +68,25 @@ examples:
   To give you an idea of how client-side applications are built using Chaplin, here are some projects and example applications whose source is freely accessible.
 </p>
 
-<p>Add more apps and examples <a href="https://github.com/chaplinjs/chaplinjs.github.com/blob/master/examples.html">on GitHub</a>.</p>
+<p>You can add another Chaplin application <a href="https://github.com/chaplinjs/chaplinjs.github.com/blob/master/examples.html">on GitHub</a>.</p>
 
-<h2>Ost.io</h2>
-<p><a href="http://ost.io/">Ost.io</a> is an open-source forum for GitHub projects (<a href="https://github.com/paulmillr/ostio">code</a>). It uses <a href="https://github.com/paulmillr/brunch-with-chaplin">Brunch with Chaplin</a> as an application skeleton and Rails for the backend.</p>
+{% for ex in page.examples %}
+  {% assign example = ex[1] %}
+  {% assign desc = example.desc | replace: '!NAME', example.name | replace: '!LINK', example.link %}
+  {% if example.repo %}
+    {% assign desc = desc | replace: '!REPO', example.repo %}
+  {% endif %}
+  <h2>{{example.name}}</h2>
+  {{desc | markdownify}}
 
-<p>
-  <a href="http://ost.io/">
-    <img src="images/screenshots/ostio-07-2013.png" alt="Ost.io">
-  </a>
-</p>
-
-<h2>Todos</h2>
-<p><a href="http://todomvc.com/labs/dependency-examples/chaplin-brunch/public/">Todos</a> (<a href="https://github.com/addyosmani/todomvc/tree/gh-pages/labs/dependency-examples/chaplin-brunch">code</a>) is a port of the famous Backbone todo example app. It uses localStorage to persist data.</p>
-
-<p>Alternative versions:</p>
-
-<ul>
-  <li><a href="http://dunglas.fr/2013/02/symfony-2-todomvc-backbone-chaplin/">Symfony TodoMVC Bundle</a> (<a href="https://github.com/dunglas/DunglasTodoMVCBundle">code</a>) — based on <a href="http://symfony.com/">Symfony</a> PHP framework.</li>
-</ul>
-
-<p class="example-screenshot">
-  <a href="http://todomvc.com/labs/dependency-examples/chaplin-brunch/public/">
-    <img src="http://todomvc.com/site-assets/screenshot.png" alt="TodoMVC">
-  </a>
-</p>
-
-<h2>Composing with Chaplin</h2>
-<p><a href="http://chaplinjs.org/composer-example/public/">Composing with Chaplin</a> is an example that shows how Chaplin regions and compositions behave. Find its source code <a href="https://github.com/chaplinjs/composer-example">on GitHub</a>.
-
-<h2>Facebook Like Browser</h2>
-<p>This example application uses Facebook client-side authentication to display the user’s Facebook Likes. Find its source at <a href="https://github.com/chaplinjs/facebook-example">github.com/chaplinjs/facebook-example</a>.</p>
-
-<h2>Tweet your Brunch</h2>
-<p><a href="https://github.com/brunch/twitter">github.com/brunch/twitter</a> is a simple twitter client. It uses Twitter client-side authentication to display the user’s feed and create new tweets.</p>
-
-<h2>Symfony demo</h2>
-<p><a href="https://github.com/pulse00/symfony-chaplin-demo">The app</a> is used as a demo for the <a href="https://github.com/symfony/symfony">Symfony</a> <a href="http://www.meetup.com/sfugvienna/">usergroup vienna</a> to demonstrate a single page app using Symfony as a REST backend and chaplin as the html5 frontend.</p>
+  {% if example.shot %}
+    <p class="example-screenshot">
+      <a href="{{example.link}}">
+        <img src="{{example.shot}}" alt="{{example.name}} screenshot">
+      </a>
+    </p>
+  {% endif %}
+{% endfor %}
 
 <h1>In Production</h1>
 
@@ -59,49 +94,20 @@ examples:
   Below you find some of the companies and projects using Chaplin in production. Are you using Chaplin too? Go ahead and <a href="https://github.com/chaplinjs/chaplin/wiki/Projects-and-companies-using-Chaplin">add your application to the wiki page</a> to let us know!
 </p>
 
-<h2>Delicious</h2>
-<p><a href="https://delicious.com">Delicious</a> is a free service designed to be the best place to save what you love on the web, whether it's a video, picture, product, blog post, article or music. We then help you remember and find it later. It’s using Brunch as application builder and <a href="http://chaplinjs.org">Chaplin</a> as a framework on top of Backbone.</p>
+{% for ex in page.production %}
+  {% assign example = ex[1] %}
+  {% assign desc = example.desc | replace: '!NAME', example.name | replace: '!LINK', example.link %}
+  {% if example.repo %}
+    {% assign desc = desc | replace: '!REPO', example.repo %}
+  {% endif %}
+  <h2>{{example.name}}</h2>
+  {{desc | markdownify}}
 
-<p>
-  <a href="https://delicious.com">
-    <img src="images/screenshots/delicious-07-2013.png" alt="Delicious">
-  </a>
-</p>
-
-
-<h2>Moviepilot</h2>
-<p><a href="http://moviepilot.com/">Moviepilot</a> is a home for upcoming movies, where you can discover and read about the movies that interest and excite you. It was the original Chaplin app.</p>
-
-<p>
-  <a href="http://moviepilot.com/">
-    <img src="images/screenshots/moviepilot-07-2013.png" alt="Moviepilot">
-  </a>
-</p>
-
-<h2>GED VIZ by Bertelsmann Stiftung</h2>
-<p><a href="http://viz.ged-project.de/">GED VIZ</a> lets you create and share visualizations of global economic relations - for research, teaching and storytelling. Source code is available <a href="https://github.com/bertelsmannstift/GED-VIZ/tree/master/app/assets/javascripts">on GitHub</a></p>
-
-<p>
-  <a href="http://viz.ged-project.de/">
-    <img src="images/screenshots/ged-07-2013.png" alt="GED VIZ">
-  </a>
-</p>
-
-<h2>Bank of Ireland</h2>
-<p>The <a href="http://fundcentre.bankofireland.com/">Bank of Ireland Fund Centre</a> is a free service by MoneyMate that allows users to check funds, daily prices and performance.</p>
-
-<p>
-  <a href="http://fundcentre.bankofireland.com/">
-    <img src="images/screenshots/bankofireland-07-2013.png" alt="Bank of Ireland Fund Centre">
-  </a>
-</p>
-
-<h2>Dogkr</h2>
-
-<p><a href="http://www.dogkr.com">Dogkr</a> is an online logger to record all your beloved dogs’ life moments, even tiny instants became timeless memories.</p>
-
-<p>
-  <a href="http://moviepilot.com/">
-    <img src="http://cdn.dogkr.com/static/images/home_shot.jpg" alt="Dogkr" />
-  </a>
-</p>
+  {% if example.shot %}
+    <p class="example-screenshot">
+      <a href="{{example.link}}">
+        <img src="{{example.shot}}" alt="{{example.name}} screenshot">
+      </a>
+    </p>
+  {% endif %}
+{% endfor %}
