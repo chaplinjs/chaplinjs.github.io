@@ -30,6 +30,89 @@
   margin: 0px;
 }
 
+.nav-header {
+  background-color: rgba(188, 122, 152, 0.95);
+  border-bottom: 0;
+  height: 40px;
+  color: #fff;
+  font-family: 'Helvetica';
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.nav-header .list-wrapper {
+  width: 752px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.nav-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  /*-webkit-filter: blur(8px) contrast(0.4) brightness(1.4);*/
+}
+
+
+.nav-header ul {
+  padding-left: 1.125em;
+}
+
+.nav-header .logo > img {
+  margin-top: 7px;
+}
+
+.nav-header .logo {
+  width: 52px;
+  float: left;
+}
+
+.nav-header .logo-text {
+  text-transform: none;
+  margin-right: 15px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.nav-header li {
+  padding: 0 0.625em;
+  float: left;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.nav-header a {
+  color: #fff;
+}
+
+.nav-header a:hover {
+  color: #c4baa6;
+}
+
+.nav-header a.active {
+  color: #6fcecb;
+}
+
+.nav-header h1 {
+  /*font-size: 98px;*/
+  text-shadow: 2px 2px 3px #111;
+}
+
+.nav-header h1, .nav-header p {
+  /*color: #eee;*/
+}
+
+.page-nav {
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+.page-nav li {
+  display: inline;
+}
+
 .social-buttons {
   margin-bottom: 20px;
 }
@@ -159,89 +242,6 @@ footer {
   }
 }
 */
-
-.nav-header {
-  background-color: rgba(188, 122, 152, 0.95);
-  border-bottom: 0;
-  height: 40px;
-  color: #fff;
-  font-family: 'Helvetica';
-  position: relative;
-  font-size: 18px;
-  font-weight: 100;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.nav-header .list-wrapper {
-  width: 752px;
-  margin: 0 auto;
-  padding-top: 5px;
-}
-
-.nav-header {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  /*-webkit-filter: blur(8px) contrast(0.4) brightness(1.4);*/
-}
-
-
-.nav-header ul {
-  padding-left: 1.125em;
-}
-
-.nav-header .logo > img {
-  margin-top: 7px;
-}
-
-.nav-header .logo {
-  width: 52px;
-  float: left;
-}
-
-.nav-header .logo-text {
-  text-transform: none;
-  margin-right: 15px;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.nav-header li {
-  padding: 0 0.625em;
-  float: left;
-  list-style-type: none;
-  text-transform: uppercase;
-}
-
-.nav-header a {
-  color: #fff;
-}
-
-.nav-header a:hover {
-  color: #c4baa6;
-}
-
-.nav-header a.active {
-  color: #6fcecb;
-}
-
-.nav-header h1 {
-  /*font-size: 98px;*/
-  text-shadow: 2px 2px 3px #111;
-}
-
-.nav-header h1, .nav-header p {
-  /*color: #eee;*/
-}
-
-.page-nav {
-  padding: 0;
-  margin: 0;
-  padding-left: 20px;
-}
-.page-nav li {
-  display: inline;
-}
 
 .toggle-navigation {
   margin: 0;
