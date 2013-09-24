@@ -16,7 +16,7 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 <div class="downloads clearfix">
   <div class="primary-downloads">
     <div class="download-block">
-      <a class="dl-button" href="http://chaplinjs.org/downloads/chaplin.js">Download chaplin.js</a>
+      <a class="dl-button primary" href="http://chaplinjs.org/downloads/chaplin.js">Download chaplin.js</a>
       <p>or install with package managers:</p>
       <ul>
         <li><code>bower install --save chaplin</code></li>
@@ -24,7 +24,7 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
       </ul>
     </div>
     <div class="download-block">
-      <a class="dl-button" href="http://chaplinjs.org/downloads/chaplin.min.js">Minified (14K gzip)</a>
+      <a class="dl-button primary" href="http://chaplinjs.org/downloads/chaplin.min.js">Minified (14K gzip)</a>
     </div>
   </div>
 
@@ -49,6 +49,38 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
   <div class="download-block">
     <a class="dl-button secondary" href="https://github.com/chaplinjs/chaplin-rails/archive/master.zip">Rails boilerplate</a>
     <p>With Backbone, Chaplin and Require.js</p>
+  </div>
+</div>
+
+<div class="downloads why-answers clearfix">
+  <h2>Why Chaplin</h2>
+  <div class="download-block">
+    <div class="dl-button dummy">More than Backbone</div>
+    <p>Backbone is very good at what it does (simple MVC library), but just library is not enough for single-page apps. For example, there is no good memory management solution in Backbone.</p>
+    <p>Chaplin addresses these limitations by providing a lightweight but flexible structure which leverages well-proven design patterns and best practises.</p>
+  </div>
+
+  <div class="download-block">
+    <div class="dl-button dummy">Super scalable</div>
+    <p>Chaplin allows you to focus on designing and developing the underlying functionality in your web application. You can quickly make a prototype and then use it as a starting point and make really big web app in little time.</p>
+  </div>
+
+  <div class="download-block first">
+    <div class="dl-button dummy">Less to learn</div>
+    <p>
+      With <strong>Backbone</strong>, <strong>Underscore</strong> and <strong>jQuery</strong> included, Chaplin stack is just <strong>49.5K</strong> gzipped, while stuff like <a href="http://emberjs.com">Ember</a> is <strong>over 60K</strong>.
+    </p>
+
+    <p>When Ember and Angular require you to learn the whole new software stack, if you're new to MVC and coming from JS, you may  already know jQuery or underscore. So, you need less to learn!</p>
+  </div>
+
+  <div class="download-block">
+    <div class="dl-button dummy">Clean architecture</div>
+    <p>Chaplin allows you to achieve these goals:</p>
+    <ul>
+      <li><strong>No global variables:</strong> forgot about horrible global shared mutable namespaces a-la <small>App.Views.Signup.ContinueStep</small>. Using any module system (Common.js, AMD or ES6) is <em>required</em> for Chaplin.</li>
+      <li><strong>Loose coupling:</strong> by default, you can’t access chaplin internals inside your app. Events and messages are used in communication of components.</li>
+    </ul>
   </div>
 </div>
 
@@ -84,18 +116,6 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 
 <p>If you’ll be using Chaplin with AMD, you will also need an AMD module loader like <a href="http://requirejs.org/">RequireJS</a>, <a href="https://github.com/jrburke/almond">Almond</a> or <a href="https://github.com/cujojs/curl">curl</a> to load Chaplin and lazy-module application modules.
 </p>
-
-<!--
-Why Chaplin
-
-<p>
-  With Backbone, Underscore and jQuery included, Chaplin stack is just <strong>49.5K</strong> gzipped. Ember* js >60K, Angular* core is >120K.
-</p>
-
-<p>When Ember and Angular require you to learn the whole new software stack, if you're new to MVC and coming from JS, you may likely already know jQuery or underscore.js. So, you need much less to learn!</p>
-
-* Ember.js 1.0.0, Angular.js 1.0.7
--->
 
 <h2>Brought to you by</h2>
 

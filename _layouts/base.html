@@ -38,29 +38,7 @@
   </div>
 
 <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-<script>
-(function() {
-  var queryAll = function(selector) {
-    return [].slice.call(document.querySelectorAll(selector));
-  };
-  var links = queryAll('.page-nav > li > a');
-  links.forEach(function(link) {
-    link.className = link.className.replace('active', '');
-    var re = new RegExp(link.getAttribute('data-pattern'));
-    console.log(location.href, re);
-    if (re.test(location.href)) link.className += ' active';
-  });
-
-  document.querySelector('.page-nav .toggle-navigation').addEventListener('click', function() {
-    queryAll('.page-nav .nav-toggle-content').forEach(function(item) {
-      var existing = window.getComputedStyle(item).display;
-      var newStyle = (existing === 'none') ? 'list-item' : 'none';
-      console.log(item, newStyle)
-      item.style.display = newStyle;
-    });
-  }, true);
-})();
-</script>
+<script src="/javascripts/main.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
   (function() {

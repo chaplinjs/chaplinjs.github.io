@@ -8,7 +8,7 @@
   /*padding: 10px 0 10px 0;*/
   margin: 0;
   text-align: center;
-  background: url(../images/background.png) #4276b6;
+  background: #4276b6;
   border-bottom: 6px solid #2D5891;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -webkit-font-smoothing: antialiased;
@@ -157,8 +157,12 @@ footer {
   margin-bottom: 100px;
 }
 
-.downloads h3 {
+.downloads h2, .downloads h3 {
   text-align: center;
+}
+
+.downloads.why-answers {
+  margin-bottom: 0;
 }
 
 .dl-button {
@@ -180,9 +184,21 @@ footer {
   border-color: #cca291;
 }
 
+.dl-button.primary:hover {
+  color: #c4baa6;
+}
+
+.dl-button.secondary:hover {
+  color: #b5679c;
+}
+
+.dl-button.dummy {
+  background-color: #8dbad6;
+}
+
 .download-block {
   width: 165px;
-  height: 205px;
+  /*height: 205px;*/
   margin-left: 5px;
   display: inline-block;
   vertical-align: top;
@@ -194,14 +210,6 @@ footer {
 
 .download-block p {
   padding-left: 2px;
-}
-
-.dl-button:hover {
-  color: #c4baa6;
-}
-
-.dl-button.secondary:hover {
-  color: #b5679c;
 }
 
 .primary-downloads {
