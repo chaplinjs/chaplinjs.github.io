@@ -259,8 +259,8 @@ footer {
   width: 48px;
   height: 32px;
   padding: 8px 12px;
-  background-color: rgba(188, 122, 152, 0.95);
-  border: 1px solid rgba(188, 122, 152, 0.95);
+  background-color: transparent;
+  border: 0;
 }
 
 .toggle-navigation > .icon-bar {
