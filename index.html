@@ -115,6 +115,7 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
   <li>Better support for CoffeeScript <strong>class hierarchies</strong> as well as object composition</li>
   <li>Better support for <strong>inheritance</strong>: automatic merging of declaratively bound events (and some other props) from the whole prototype chain.</li>
   <li>Strict <strong>memory management</strong> and object disposal</li>
+  <li>Optional Underscore and jQuery using <a href="http://exosjs.com">Exoskeleton</a></li>
   <li><strong>Module</strong> encapsulation and lazy-loading using AMD / common.js modules</li>
   <li>Cross-module communication using the <strong>Mediator</strong> and Publish/Subscribe patterns</li>
   <li><strong>Controllers</strong> for managing individual UI views</li>
@@ -129,15 +130,11 @@ Chaplin is an architecture for JavaScript applications using the <a href="http:/
 
 <p>Chaplin supports AMD and Common.js modules. There is no “global variables” build, so Chaplin explicitly prohibits any using without module systems.</p>
 
-<p>Latest release is 0.11.0 (<a href="https://github.com/chaplinjs/chaplin/blob/master/CHANGELOG.md">changelog</a>, <a href="http://github.com/chaplinjs/chaplin/compare/0.10.0...0.11.0">diff from 0.10.0</a>)</p>
+<p>Latest release is 0.11.2 (<a href="https://github.com/chaplinjs/chaplin/blob/master/CHANGELOG.md">changelog</a>, <a href="http://github.com/chaplinjs/chaplin/compare/0.10.0...0.11.2">diff from 0.10.0</a>)</p>
 
-<p>Chaplin depends on the following libraries:</p>
+<p>If you're using Chaplin with <a href="http://documentcloud.github.com/backbone/">Backbone</a>, you will need <a href="http://lodash.com/">lodash</a> / <a href="http://documentcloud.github.com/underscore/">Underscore</a> and <a href="http://jquery.com/">jQuery</a> / <a href="http://zeptojs.com">Zepto</a>.</p>
 
-<ul>
-  <li><a href="http://documentcloud.github.com/backbone/">Backbone</a> (> 1.0)</li>
-  <li><a href="http://lodash.com/">lodash</a> (> 2.0) or <a href="http://documentcloud.github.com/underscore/">Underscore</a> (> 1.5)</li>
-  <li><a href="http://jquery.com/">jQuery</a> (> 1.10) or <a href="http://zeptojs.com">Zepto</a> (> 1.0)</li>
-</ul>
+<p>There is another option — you can use <a href="http://exosjs.com">Exoskeleton</a>. Exoskeleton is a faster and leaner Backbone for your HTML5 apps. It allows you to totally drop these dependencies. Just include Exoskeleton with Chaplin and you're done.</p>
 
 <p>If you’ll be using Chaplin with AMD, you will also need an AMD module loader like <a href="http://requirejs.org/">RequireJS</a>, <a href="https://github.com/jrburke/almond">Almond</a> or <a href="https://github.com/cujojs/curl">curl</a> to load Chaplin and lazy-module application modules.
 </p>
